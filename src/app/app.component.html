@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="searchText" name="searchText">
+<p>Resultado da busca por: {{searchText}}</p>
+<ul>
+    <li *ngFor="let person of persons | filter:searchText">
+        <span>{{person.name}}</span>
+        <ol>
+            <li *ngFor="let friend of person.friends">
+                <span>{{friend.name}}</span>
+            </li>
+        </ol>
+    </li>
+</ul>
