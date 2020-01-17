@@ -62,7 +62,16 @@ export class AppComponent {
         {
           "id": 4,
           "name": "Faulkner Hinton"
-        }
+        }, {
+          "id": 5,
+          "name": "Navarro Guy",
+          "friends": [
+            {
+              "id": 0,
+              "name": "Obrien Hester"
+            }
+          ]
+        },
       ]
     },
     {

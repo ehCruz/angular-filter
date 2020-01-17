@@ -6,6 +6,11 @@
         <ol>
             <li *ngFor="let friend of person.friends">
                 <span>{{friend.name}}</span>
+                <ul>
+                    <li *ngFor="let f of friend.friends">
+                        <span>{{f.name}}</span>
+                    </li>
+                </ul>
             </li>
         </ol>
     </li>
