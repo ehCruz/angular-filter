@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'filter';
 
+  teste = ""
+
   persons = [
     {
       "index": 0,

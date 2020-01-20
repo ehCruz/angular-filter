@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HorarioDirective } from './horario.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterPipe
+    FilterPipe,
+    HorarioDirective
   ],
   imports: [
     BrowserModule,
