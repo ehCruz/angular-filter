@@ -17,3 +17,26 @@
 </ul>
 
 <input type="text" appHorario [(ngModel)]="teste">
+
+<hr>
+
+<div *ngFor="let estudante of arrEstudantes; let i = index">
+    <label for="m-{{i}}">Matricula:</label>
+    <input id="m-{{i}}" type="text"  name="matricula-{{i}}"
+        [(ngModel)]="estudante.matricula" 
+        #matriculaEstudante="ngModel"
+        [appVduplicate]="{values: arrEstudantes, key: 'matricula'}">
+    <label *ngIf="(matriculaEstudante.errors && matriculaEstudante.touched && matriculaEstudante.dirty) && matriculaEstudante.errors?.isDuplicado">Matricula Duplicado</label>
+    
+    <br>
+    
+    <label for="n-{{i}}">Nome:</label>
+    <input id="n-{{i}}" type="text"  name="nome-{{i}}"
+        [(ngModel)]="estudante.nome" #nomeEstudante="ngModel"
+        [appVduplicate]="{values: arrEstudantes, key: 'nome'}">
+    <label *ngIf="(nomeEstudante.errors && nomeEstudante.touched && nomeEstudante.dirty) && nomeEstudante.errors?.isDuplicado">Nome Duplicado</label>
+    <br>
+    <br>
+</div>
+<br>
+<input type="button" value="Adicionar estudante" (click)="addEstudante()">

@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HorarioDirective } from './horario.directive';
+import { VduplicateDirective } from './vduplicate.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterPipe,
-    HorarioDirective
+    HorarioDirective,
+    VduplicateDirective
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Estudante } from './models/Estudante';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
+
+  arrEstudantes: Array<Estudante> = [
+    {matricula: '123', nome: 'John Doe'},
+    {matricula: '456', nome: 'Ann Mary'},
+  ]
+
+  addEstudante() {
+    this.arrEstudantes.push({matricula: '', nome: ''});
+  }
+
   title = 'filter';
 
   teste = ""
@@ -538,4 +549,5 @@ export class AppComponent {
     }
   ]
 
+  
 }
